@@ -1,0 +1,48 @@
+
+// VARIABLES
+$font-logo: 'OldEnglish';
+$font-title: 'Space Grotesk', sans-serif;
+$font-subtitle: 'Inter', sans-serif;
+$font-italic: 'Playfare Display', serif;
+
+$color-bg: #E9E6E4;
+$color-text: #151515;
+$color-border: #94918F;
+$color-orange: #B46633;
+
+
+@font-face {
+  font-family: 'OldEnglish';
+  src: url('../fonts/OPTIEngraversOldEnglish.otf') format('opentype');
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;           // 10px/16px
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: $color-bg;
+}
+
+
+.container {
+  height: 100vh;
+  // width: 100vw;
+
+  display: grid;
+  grid-template-columns: [sidebar-start] 12% [sidebar-end full-start] 20% [blog-left-end blog-right-start] 38% [blog-right-end blog-featured-start] 30% [full-end];
+  grid-template-rows: 15vh 62vh 20vh 3vh;
+}

@@ -1,0 +1,369 @@
+
+.blog__main {
+
+  &-left {
+    grid-column: full-start / blog-left-end;
+    grid-row: 2 / 3;
+
+    padding: 2rem;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 2.5rem;
+      bottom: 2.5rem;
+      width: .5px;
+      background-color: $color-border;
+    }
+  }
+
+  &-right {
+    grid-column: blog-right-start / blog-right-end;
+    grid-row: 2 / 3;
+
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 2.5rem;
+      bottom: 2.5rem;
+      width: .5px;
+      background-color: $color-border;
+    }
+  }
+}
+
+
+
+
+.blog__left {
+  &-box1 {
+    color: $color-text;
+    margin-bottom: 2rem;
+
+    & span {
+      font-family: $font-subtitle;
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: .5rem;
+      text-transform: uppercase;
+    }
+  }
+  &-title {
+    font-family: $font-title;
+    font-size: 4.5rem;
+    line-height: 4rem;
+    padding-bottom: 2rem;
+    padding-top: .7rem;
+    
+  }
+  &-content {
+    font-family: $font-subtitle;
+    font-size: 1.8rem;
+  }
+
+
+  &-box2 {
+    color: $color-text;
+
+    & span:nth-child(1) {
+      position: absolute;
+      top: -1rem;
+      left: -1.5rem;
+      font-size: 4.5rem;
+      font-family: $font-title;
+    }
+
+    & span:nth-child(2) {
+      font-family: $font-italic;
+      font-size: 1.4rem;
+      font-style: italic;
+      margin-left: 1rem;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 2rem;
+    }
+  }
+  &-quote {
+    font-family: $font-italic;
+    font-size: 1.8rem;
+    font-style: italic;
+    position: relative;
+    padding-left: 1.7rem;
+    text-indent: 3rem;
+    
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: .5px;
+      opacity: .6;
+      background-color: $color-border;
+    }
+  }
+
+  &-author-box {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 1rem 1.5rem;
+  }
+  &-img {
+    width: 4rem;
+    border-radius: 50%;
+    filter: grayscale(1);
+  }
+
+
+
+  &-box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-text;
+    position: relative;
+    margin-top: 1rem;
+
+    
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      border-top: 1px solid $color-border;
+    }
+  }
+  &-page {
+    font-family: $font-title;
+    font-size: 5rem;
+    font-weight: 400;
+
+  }
+}
+
+
+.blog__right {
+  &-box1 {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    position: relative;
+    border: 1px solid $color-border;
+    
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      border-top: 1px solid $color-border;
+    }
+  }
+
+  &-img-div {
+    flex: 0 0 55%;
+    overflow: hidden;
+  }
+  &-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(1) brightness(150%);
+    transition: transform 2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &-text-div {
+    text-align: center;
+    padding-left: 1rem;
+    
+    & span:nth-of-type(1) {
+        font-family: $font-title;
+        font-size: 6rem;
+        display: block;
+        margin-bottom: -5rem;
+        margin-top: -2rem;
+      }
+    & span:nth-of-type(2) {
+      font-family: $font-subtitle;
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: .5rem;
+      text-transform: uppercase;
+    }
+  }
+  &-title {
+    font-family: $font-title;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    padding-bottom: 2rem;
+    padding-top: .7rem;
+  }
+  &-content {
+    font-family: $font-subtitle;
+    font-size: 1.5rem;
+  }
+
+
+
+  &-box2 {
+    color: $color-text;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & span {
+      font-family: $font-subtitle;
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: .5rem;
+      text-transform: uppercase;
+      margin-bottom: .7rem;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    // column-gap: 2.5rem;
+    row-gap: 1rem;
+    
+  }
+
+  &-quote-div {
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid black;
+    // box-shadow: 0 -1px 0 #000;
+
+    // &:nth-child(1),
+    // &:nth-child(2),
+    // &:nth-child(3) {
+    //   border-top: none;
+    //   border-left: none;
+    // }
+    // &:nth-child(4),
+    // &:nth-child(5),
+    // &:nth-child(6) {
+    //   border-top: none;
+    // }
+
+  }
+  &-author-box {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 1rem 0 1rem 1.5rem;
+
+      & span {
+        font-size: 1.4rem;
+        font-style: italic;
+        font-family: $font-italic;
+        letter-spacing: normal;
+        text-transform: capitalize;
+        margin-left: 1rem;
+        margin-top: 1rem;
+      }
+  }
+  &-quote {
+    font-family: $font-italic;
+    font-size: 1.5rem;
+    font-style: italic;
+    position: relative;
+    padding-left: 1.7rem;
+    text-indent: 1.5rem;
+    position: relative;
+
+    & span {
+      position: absolute;
+      top: -.7rem;
+      left: -.3rem;
+      font-size: 3.5rem;
+      font-family: $font-title;
+    }
+  }
+
+  &-portrait {
+      width: 3rem;
+      border-radius: 50%;
+      filter: grayscale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.blog__bottom {
+  background-color: yellowgreen;
+
+  grid-column: full-start / blog-right-end;
+
+  &-item {
+
+  }
+  &-content {
+
+  }
+  &-details {
+
+  }
+}
+
+
+.blog__featured {
+  grid-column: blog-featured-start / full-end;
+  grid-row: 2 / 4;
+  background-color: purple;
+
+  &-titlebox {
+
+  }
+  &-title--main {
+
+  }
+
+  &-article {
+
+  }
+  &-title {
+
+  }
+  &-detail {
+
+  }
+  &-content {
+
+  }
+  &-link {
+
+  }
+}
