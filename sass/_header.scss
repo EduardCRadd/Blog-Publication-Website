@@ -9,7 +9,7 @@
 
   background:
       radial-gradient(circle at 5px 5px,
-        rgba(grey, .3) 1.7px,
+        rgba(grey, .1) 1.7px,
         transparent 1.7px,
         transparent 10px) 0 0 / 8px 8px;
   // border-bottom: 5px solid black;
@@ -29,7 +29,7 @@
 
   &__main {
     font-family: $font-logo;
-    font-size: 6rem;
+    font-size: 6.5rem;
     font-weight: 100;
     letter-spacing: -1px;
     word-spacing: -10px;

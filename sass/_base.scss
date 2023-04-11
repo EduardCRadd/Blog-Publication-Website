@@ -40,9 +40,8 @@ body {
 
 .container {
   height: 100vh;
-  // width: 100vw;
 
   display: grid;
-  grid-template-columns: [sidebar-start] 12% [sidebar-end full-start] 20% [blog-left-end blog-right-start] 38% [blog-right-end blog-featured-start] 30% [full-end];
+  grid-template-columns: [sidebar-start] 12% [sidebar-end full-start] 23% [blog-left-end blog-right-start] 35% [blog-right-end blog-featured-start] 30% [full-end];
   grid-template-rows: 15vh 62vh 20vh 3vh;
 }

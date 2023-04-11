@@ -1,4 +1,8 @@
 
+.sidebar__wrapper {
+
+}
+
 .sidebar {
   grid-column: sidebar-start / sidebar-end;
   grid-row: 2 / 4;
@@ -8,16 +12,18 @@
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
+  border-right: 1px solid $color-border;
+  margin: 2.5rem 0;
 
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 2.5rem;
-    bottom: 2.5rem;
-    width: .5px;
-    background-color: $color-border;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   right: 0;
+  //   top: 2.5rem;
+  //   bottom: 2.5rem;
+  //   width: .5px;
+  //   background-color: $color-border;
+  // }
 
   &__list {
     list-style: none;
