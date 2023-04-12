@@ -12,8 +12,6 @@
         rgba(grey, .1) 1.7px,
         transparent 1.7px,
         transparent 10px) 0 0 / 8px 8px;
-  // border-bottom: 5px solid black;
-  // border: 1.5rem solid $color-bg;
   position: relative;
 
   &::after {
@@ -23,8 +21,8 @@
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    height: 4px;
-    background-color: black;
+    height: 2.5px;
+    background-color: $color-text;
   }
 
   &__main {

@@ -1,4 +1,5 @@
 
+// SIDEBAR
 const sidebarItems = document.querySelectorAll(".sidebar__item");
 const firstItemSvg = sidebarItems[0].querySelector("svg");
 
@@ -36,12 +37,34 @@ sidebarItems.forEach((item) => {
 firstItemSvg.style.display = "inline-block";
 
 
-// const gridContainer = document.getElementById('blog__right-grid');
-// let currentGap = parseInt(window.getComputedStyle(gridContainer).gap);
 
-// window.addEventListener('resize', () => {
-//   const newGap = currentGap + 10; // increase gap by 10 pixels
-//   gridContainer.style.gap = `${newGap}px`;
-//   currentGap = newGap;
-// });
+// MARQUEE
+const marquee = document.querySelector(".marquee");
+const marqueeInner = document.querySelector(".marquee__inner");
+
+const clone = marqueeInner.cloneNode(true);
+marquee.appendChild(clone);
+
+
+
+// DATE
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+const currentDate = new Date();
+const dayOfWeek = daysOfWeek[currentDate.getDay()];
+const month = monthsOfYear[currentDate.getMonth()];
+const date = currentDate.getDate();
+const year = currentDate.getFullYear();
+
+const formattedDate = `${dayOfWeek} ${month} ${date} ${year}`;
+
+
+var typing=new Typed(".text", {
+       strings: [formattedDate],
+       typeSpeed: 100,
+       backSpeed: 40,
+       loop: false,
+       showCursor: false
+   });
 
