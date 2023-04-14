@@ -67,4 +67,3 @@ var typing=new Typed(".text", {
        loop: false,
        showCursor: false
    });
-

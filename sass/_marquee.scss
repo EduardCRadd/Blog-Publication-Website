@@ -22,7 +22,7 @@
       width: 10px;
       height: 10px;
       left: -2.7rem;
-      top: .7rem;
+      top: .55rem;
       background-color: $color-bg;
       // margin-right: 12px;
       position: absolute;
@@ -47,7 +47,7 @@
 
 .marquee__inner {
   display: inline-block;
-  animation: marquee calc(60s / 2000 * var(--width)) linear infinite;
+  animation: marquee calc(60s / 1000 * var(--width)) linear infinite;
   --width: 800;
   
 }

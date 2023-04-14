@@ -1,14 +1,5 @@
 
-// VARIABLES
-$font-logo: 'OldEnglish';
-$font-title: 'Space Grotesk', sans-serif;
-$font-subtitle: 'Inter', sans-serif;
-$font-italic: 'Playfare Display', serif;
-
-$color-bg: #E9E6E4;
-$color-text: #151515;
-$color-border: #94918F;
-$color-orange: #B46633;
+@import "variables";
 
 
 @font-face {
@@ -27,7 +18,7 @@ $color-orange: #B46633;
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;           // 10px/16px
+  font-size: 53.5%; 
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -37,6 +28,9 @@ body {
   background-color: $color-bg;
 }
 
+::selection {
+  background-color: $color-highlight;
+}
 
 .container {
   height: 100vh;
