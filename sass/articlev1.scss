@@ -10,14 +10,11 @@
   grid-template-columns: repeat(7, minmax(min-content, 1fr));
   grid-template-rows: repeat(26, 9vw);
   grid-auto-flow: dense;
-
 }
 
 
 .article1 {
   &__img-box {
-    background-color: #fff;
-
     grid-row: 1 / 5;
     grid-column: 1 / -1;
   }
@@ -49,7 +46,8 @@
   }
   &__subtitle {
     color: $color-text;
-    font-size: 3.3rem;
+    // font-size: 3.3rem;
+    font-size: 1.65vw;
     font-family: $font-title;
     margin-bottom: -.5rem;
   }
@@ -61,7 +59,8 @@
   &__content--right {
     color: $color-text;
     font-family: $font-subtitle;
-    font-size: 2.2rem;
+    // font-size: 2.2rem;
+    font-size: 1.16vw;
 
     text-justify: inter-word;
     text-align: justify;
@@ -80,7 +79,8 @@
     border-top: 1px solid $color-border;
 
     & p:last-of-type {
-      padding-bottom: 0;
+      // padding-bottom: 0;
+      border-bottom: 1px solid $color-border;
     }
   }
   &__content--main {
@@ -118,6 +118,132 @@
   }
 
 
+  &__button-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2rem;
+
+    & :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__button--like-box {
+
+  }
+  &__button--like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $color-bg;
+    padding: 1rem 1.5rem;
+    border-radius: 100px;
+    border: 1px solid $color-border;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba($color-text, .7);
+    transition: background-color .2s;
+
+    & svg {
+      margin-right: .7rem;
+      fill: $color-border;
+      width: 18px;
+      height: auto;
+    }
+
+    &:hover svg {
+      fill: #EB5757;
+    }
+    &:hover {
+      background-color: rgba($color-border, .2);
+    }
+    &:active {
+      background-color: #F5B9BA;
+      border: none;
+      padding: 1.1rem 1.6rem;
+    }
+
+    &.active {
+      background-color: #F5B9BA;
+      border: none;
+      padding: 1.1rem 1.6rem;
+    }
+    &.active svg {
+      fill: #EB5757;
+      animation: like 0.5s 1;
+    }
+
+
+    @-webkit-keyframes like {
+      0%   { transform: scale(1); }
+      90%   { transform: scale(1.2); }
+      100% { transform: scale(1.1); }
+}
+
+  }
+
+  &__button--share-box {
+
+  }
+  &__button--share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $color-bg;
+    padding: 1rem 1.5rem;
+    border-radius: 100px;
+    border: 1px solid $color-border;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba($color-text, .7);
+    transition: background-color .2s;
+
+    & svg {
+      margin-right: .7rem;
+      // fill: $color-border;
+      width: 18px;
+      height: auto;
+    }
+
+    &:hover {
+      background-color: rgba($color-border, .2);
+    }
+  }
+  &__button--bookmark-box {
+
+  }
+  &__button--bookmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $color-bg;
+    padding: 1rem 1.5rem;
+    border-radius: 100px;
+    border: 1px solid $color-border;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba($color-text, .7);
+    transition: background-color .2s;
+
+    & svg {
+      margin-right: .7rem;
+      // fill: $color-border;
+      width: 18px;
+      height: auto;
+    }
+
+    &:hover {
+      background-color: rgba($color-border, .2);
+    }
+    
+  }
+
+
+
   &__footer-box {
     grid-column: 1 / -1;
     grid-row: 27 / span 2;
@@ -125,12 +251,7 @@
     border-top: 5px solid $color-text;
     color: $color-text;
     padding-bottom: 1rem;
-    // margin-top: -10rem;
-
-    // @media screen and (-webkit-min-device-pixel-ratio:0) {
-    //   grid-row: 23 / span 2;
-    //   margin-top: 5rem;
-    // }
+    margin-top: 15rem;
 
     background:
       radial-gradient(circle at 5px 5px,
@@ -159,10 +280,10 @@
   &__footer-content--wrapper {
     display: flex;
     margin-left: auto;
-    margin-right: 20rem;
+    margin-right: 10rem;
   }
   &__footer-content-box1 {
-    margin-right: 40rem;
+    margin-right: 30rem;
   }
   &__footer-content-box2 {
 
@@ -179,4 +300,3 @@
   }
 
 }
-

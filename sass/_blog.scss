@@ -26,6 +26,12 @@
     &--section:nth-child(3) {
       margin-top: .5rem;
     }
+
+    &--section:nth-child(2) {
+      @media not all and (pointer: coarse) and (max-width: 1500px) {
+        margin: 3rem 0;
+      }
+    }
   }
 
   &-right {
@@ -49,6 +55,14 @@
     color: $color-text;
     margin-bottom: 2rem;
 
+    @media only screen and (max-width: $breakpoint-large) {
+      // margin-bottom: 4.5rem;
+      // margin-bottom: 12%;
+    }
+    @media only screen and (max-width: $breakpoint-large) and (pointer: coarse) {
+      margin-bottom: 12%;
+    }
+
     & span {
       font-family: $font-subtitle;
       font-size: 1.2rem;
@@ -67,7 +81,8 @@
   }
   &-content {
     font-family: $font-subtitle;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    padding-bottom: 2rem;
   }
 
 
@@ -133,9 +148,15 @@
     align-items: center;
     color: $color-text;
     position: relative;
-    margin-top: 3rem;
+    // margin-top: 3rem;
+    margin-top: 9%;
 
-    
+    @media only screen and (max-width: 1500px) {
+      margin-top: 13%;
+    }
+    @media only screen and (max-width: $breakpoint-large) and (pointer: coarse) {
+      margin-top: 13%;
+    }
 
     &::before {
       content: "";
@@ -151,8 +172,10 @@
     font-family: $font-title;
     font-size: 5rem;
     font-weight: 400;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    // margin-top: 2rem;
+    margin-top: 6%;
+    // margin-bottom: 2rem;
+    margin-bottom: 6%;
 
   }
 }
@@ -174,6 +197,10 @@
       transform: translateX(-50%);
       width: 80%;
       border-top: 1px solid $color-border;
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      flex-direction: column;
     }
   }
 
@@ -198,6 +225,10 @@
       display: block;
       margin-bottom: -3.5rem;
       margin-top: -2rem;
+
+      @media only screen and (max-width: $breakpoint-medium) {
+        margin-top: 0;
+      }
     }
     & span:nth-of-type(2) {
       font-family: $font-subtitle;
@@ -213,10 +244,18 @@
     line-height: 2.5rem;
     padding-bottom: 2rem;
     padding-top: .7rem;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      font-size: 2.3rem;    
+    }
   }
   &-content {
     font-family: $font-subtitle;
     font-size: 1.5rem;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      font-size: 1.3rem;    
+    }
   }
 
 
@@ -228,13 +267,24 @@
     flex-direction: column;
     align-items: center;
 
+    @media only screen and (max-width: $breakpoint-large) {
+      margin-top: 8rem;
+    }
+    @media only screen and (max-width: $breakpoint-medium) {
+      margin-top: 5rem;
+    }
+
     & span {
       font-family: $font-subtitle;
       font-size: 1.2rem;
       font-weight: 300;
       letter-spacing: .5rem;
       text-transform: uppercase;
-      margin-bottom: .7rem;
+      margin-bottom: 1rem;
+
+      @media only screen and (max-width: $breakpoint-medium) {
+        margin-bottom: -1rem;
+      }
     }
   }
 
@@ -244,6 +294,18 @@
     grid-template-rows: repeat(2, 1fr);
     // column-gap: 2.5rem;
     row-gap: 1rem;
+
+    @media only screen and (max-width: $breakpoint-large) {
+      // margin-top: 2rem;
+      margin-top: 6%;
+      // row-gap: 3rem;
+      row-gap: 9%;
+    }
+    @media only screen and (max-width: $breakpoint-medium) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 6%;
+    }
   }
 
   &-quote-div {
@@ -251,20 +313,30 @@
     flex-direction: column;
   }
   &-author-box {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin: 1rem 0 1rem 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: 1rem 0 1rem 1.5rem;
+    position: relative;
 
-      & span {
-        font-size: 1.4rem;
-        font-style: italic;
-        font-family: $font-italic;
-        letter-spacing: normal;
-        text-transform: capitalize;
-        margin-left: 1rem;
-        margin-top: 1rem;
+    & span {
+      font-size: 1.4rem;
+      font-style: italic;
+      font-family: $font-italic;
+      letter-spacing: normal;
+      text-transform: capitalize;
+      margin-left: 1rem;
+      margin-top: 1rem;
+
+      @media only screen and (max-width: $breakpoint-medium) {
+        font-size: 1.3rem;
+        
+        position: absolute;
+        top: -.5rem;
+        left: 3rem;
       }
+    }
+
   }
   &-quote {
     font-family: $font-italic;
@@ -281,6 +353,14 @@
       left: -.3rem;
       font-size: 3.5rem;
       font-family: $font-title;
+
+      @media only screen and (max-width: $breakpoint-medium) {
+        top: -.8rem;
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      font-size: 1.4rem;
     }
   }
 
@@ -335,7 +415,6 @@
       font-size: 1.2rem;
       position: absolute;
       right: 0;
-      bottom: -1rem;
       text-transform: uppercase;
     }
   }
@@ -370,6 +449,10 @@
     display: none;
   }
 
+  @media only screen and (max-width: $breakpoint-medium) {
+    padding: 0;
+  }
+
   &-titlebox {
     display: flex;
     align-items: center;
@@ -388,6 +471,10 @@
       font-size: 2.5rem;
       position: relative;
 
+      @media only screen and (max-width: $breakpoint-medium) {
+        font-size: 2rem;
+      }
+
       &::before {
         content: "";
         border-radius: 50%;
@@ -398,7 +485,19 @@
         background-color: $color-text;
         // margin-right: 12px;
         position: absolute;
+
+        @media only screen and (max-width: $breakpoint-medium) {
+          left: -1.8rem;
+          top: .95rem;
+          width: 9px;
+          height: 9px;
+        }
       }
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      margin: 0 2.5rem 4.5rem 2.5rem;
+      padding: .7rem;
     }
 
   }
@@ -406,6 +505,10 @@
     font-family: $font-italic;
     font-size: 2.8rem;
     font-weight: 200;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      font-size: 2.3rem;
+    }
   }
 
   &-article {

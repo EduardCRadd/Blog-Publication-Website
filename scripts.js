@@ -67,3 +67,7 @@ var typing=new Typed(".text", {
        loop: false,
        showCursor: false
    });
+
+
+// document.documentElement.style.overflow = 'hidden';
+// document.body.style.overflow = 'hidden';

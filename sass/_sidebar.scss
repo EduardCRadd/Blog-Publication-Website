@@ -19,7 +19,8 @@
     list-style: none;
 
     & li:nth-last-child(-n+2) a {
-      font-size: 1.5rem;
+      // font-size: 1.5rem;
+      font-size: .75vw;
       text-transform: uppercase;
       font-weight: 300;
       
@@ -28,7 +29,7 @@
       }
     }
     & li:nth-last-child(-n+2) svg {
-      width: 24px;
+      width: 20px;
     }
 
   }
@@ -37,7 +38,8 @@
     margin-top: 3rem;
 
     &:nth-of-type(6) {
-      margin-top: 10rem;
+      // margin-top: 10rem;
+      margin-top: 10vw;
     }
 
   }
@@ -47,14 +49,20 @@
     text-decoration: none;
     display: block;
     font-family: $font-subtitle;
-    font-size: 2.5rem;
+    // font-size: 2.5rem;
+    font-size: 1.25vw;
 
     display: flex;
     align-items: center;
 
     & svg {
-      width: 35px;
+      // width: 32px;
+      width: 1.75vw;
       margin-left: 5px;
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      font-size: 1.4vw;
     }
   }
 
@@ -83,12 +91,13 @@
       text-decoration: none;
       display: block;
       font-family: $font-subtitle;
-      font-size: 1.9rem;
+      // font-size: 1.9rem;
+      font-size: 1vw;
       margin-bottom: 1rem;
       
       &:last-child {
         margin-bottom: 3rem;
-      }
+      }   
       
     }
 
@@ -102,6 +111,11 @@
         height: 15px;
         background-color: $color-text;
         margin-right: 1rem;
+
+        @media only screen and (max-width: $breakpoint-medium) {
+          width: 10px;
+          height: 10px;
+        }
       }
     }
   }

@@ -18,10 +18,23 @@
 
 html {
   box-sizing: border-box;
-  font-size: 53.5%; 
+  // font-size: 53.5%;
+  font-size: .51vw;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+
+  @media only screen and (max-width: $breakpoint-largest) {
+    // font-size: 53%;
+    font-size: .5vw;
+  }
+  @media only screen and (max-width: $breakpoint-large) {
+    // font-size: 50.4%;
+    font-size: .585vw;
+  }
+  @media only screen and (max-width: $breakpoint-medium) {
+    font-size: .75vw;
+  }
 }
 
 body {
@@ -38,4 +51,11 @@ body {
   display: grid;
   grid-template-columns: [sidebar-start] 12% [sidebar-end full-start] 23% [blog-left-end blog-right-start] 35% [blog-right-end blog-featured-start] 30% [full-end];
   grid-template-rows: 15vh 60vh 22vh 3vh;
+
+  @media only screen and (max-width: $breakpoint-large) and (pointer: coarse) {
+    grid-template-rows: 11.8vh 60vh 22vh 3vh;
+  }
+  @media only screen and (max-width: $breakpoint-medium) and (pointer: coarse) {
+    grid-template-rows: 12.6vh 60vh 22vh 3vh;
+  }
 }
