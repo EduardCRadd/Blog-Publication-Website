@@ -32,6 +32,16 @@
         margin: 3rem 0;
       }
     }
+    &--section:nth-child(2) .blog__left-box3 {
+      @media only screen and (max-width: $breakpoint-medium) {
+        margin-top: 15rem;
+      }
+    }
+    &--section:nth-child(3) .blog__left-box3 {
+      @media only screen and (max-width: $breakpoint-medium) {
+        margin-top: 22rem;
+      }
+    }
   }
 
   &-right {
@@ -70,6 +80,11 @@
       letter-spacing: .5rem;
       text-transform: uppercase;
     }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      margin-top: 1rem;
+      line-height: 1.9;
+    }
   }
   &-title {
     font-family: $font-title;
@@ -78,11 +93,19 @@
     padding-bottom: 2rem;
     padding-top: .7rem;
     
+    @media only screen and (max-width: $breakpoint-medium) {
+      padding: 1.5rem 0 3.5rem 0;
+      font-size: 4rem;
+    }
   }
   &-content {
     font-family: $font-subtitle;
     font-size: 1.7rem;
     padding-bottom: 2rem;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      padding-bottom: 5rem;
+    }
   }
 
 
@@ -133,6 +156,10 @@
     display: flex;
     align-items: center;
     margin: 1rem 0 1rem 1.5rem;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      margin: 1rem 0 6rem 1.5rem;
+    }
   }
   &-img {
     width: 4rem;
@@ -156,6 +183,9 @@
     }
     @media only screen and (max-width: $breakpoint-large) and (pointer: coarse) {
       margin-top: 13%;
+    }
+    @media only screen and (max-width: $breakpoint-medium) {
+      margin-top: 10rem;
     }
 
     &::before {
@@ -314,7 +344,7 @@
   }
   &-author-box {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-start;
     margin: 1rem 0 1rem 1.5rem;
     position: relative;
@@ -385,15 +415,22 @@
   position: relative;
 
   display: flex;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   align-items: center;
   margin: 0 2.5rem;
   border-top: 1px solid $color-border;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &-item {
     color: $color-text;
     flex: 0 0 25%;
     position: relative;
+    margin: 0 4rem;
+    display: inline-block;
 
     &::before {
       content: "";
@@ -571,8 +608,13 @@
     & svg {
       width: 30px;
       margin-right: 1rem;
-    }
 
-    
+      @media only screen and (max-width: $breakpoint-medium) {
+        width: 20px;
+      }
+      @media only screen and (max-width: $breakpoint-small) {
+        width: 15px;
+      }
+    }
   }
 }

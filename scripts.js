@@ -47,7 +47,7 @@ marquee.appendChild(clone);
 
 
 
-// DATE
+// LIVE DATE
 const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -69,5 +69,16 @@ var typing=new Typed(".text", {
    });
 
 
-// document.documentElement.style.overflow = 'hidden';
-// document.body.style.overflow = 'hidden';
+
+// BLOG BOTTOM HORIZONTAL SCROLL.
+const blogBottom = document.querySelector('.blog__bottom');
+const blogItems = document.querySelectorAll('.blog__bottom-item');
+
+let scrollPos = 0;
+let scrollAmount = 400;
+
+blogBottom.addEventListener('wheel', (event) => {
+  event.preventDefault();
+  scrollPos += event.deltaY;
+  blogBottom.scrollLeft = scrollPos;
+});
