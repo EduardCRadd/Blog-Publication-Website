@@ -1,5 +1,5 @@
 
-// SIDEBAR
+// SIDEBAR.
 const sidebarItems = document.querySelectorAll(".sidebar__item");
 const firstItemSvg = sidebarItems[0].querySelector("svg");
 
@@ -47,7 +47,7 @@ marquee.appendChild(clone);
 
 
 
-// LIVE DATE
+// LIVE DATE.
 const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -82,3 +82,27 @@ blogBottom.addEventListener('wheel', (event) => {
   scrollPos += event.deltaY;
   blogBottom.scrollLeft = scrollPos;
 });
+
+
+
+
+// SCROLL ANIMATIONS.
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");}
+    // } else {
+    //   entry.target.classList.remove("show");
+    // }
+  })
+});
+
+
+const hiddenLeftElements = document.querySelectorAll(".hidden-left");
+hiddenLeftElements.forEach((el) => observer.observe(el));
+
+const hiddenRightElements = document.querySelectorAll(".hidden-right");
+hiddenRightElements.forEach((el) => observer.observe(el));
+
+const hiddenBottomElements = document.querySelectorAll(".hidden-bottom");
+hiddenBottomElements.forEach((el) => observer.observe(el));

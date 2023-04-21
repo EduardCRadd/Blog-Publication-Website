@@ -124,7 +124,6 @@
   }
   &__text-column {
     
-
     &--1 {
       grid-column: 1 / span 3;
       grid-row: 1 / 9;
@@ -212,8 +211,7 @@
       color: $color-text;
       font-family: $font-italic;
       font-size: 1.7rem;
-      font-style: italic;
-      
+      font-style: italic; 
     }
   }
   &__text {
@@ -248,12 +246,13 @@
     // display: block;
     object-fit: cover;
     filter: grayscale(1);
-    // float: left;
   }
 
 }
 
 
+
+// MARQUEE
 .blog__marquee-box-2 {
   background-color: $color-text;
   color: $color-bg;
@@ -277,25 +276,21 @@
   margin: 0 2rem;
 }
 
-
 .wrapper-2 {
   max-width: 100%;
-  overflow: hidden;
-  
+  overflow: hidden; 
 }
 
 .marquee-2 {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  
 }
 
 .marquee__inner-2 {
   display: inline-block;
   animation: marquee calc(100s / 1000 * var(--width)) linear infinite;
   --width: 800;
-
 }
 
 .marquee__inner-2 p {

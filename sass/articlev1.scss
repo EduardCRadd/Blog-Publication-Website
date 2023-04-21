@@ -69,7 +69,7 @@
     // font-size: 3.3rem;
     font-size: 1.6vw;
     font-family: $font-title;
-    margin-bottom: -.5rem;
+    // margin-bottom: -.5rem;
 
     @media only screen and (max-width: $breakpoint-medium) {
       font-size: 1.7vw;
@@ -83,7 +83,7 @@
   &__content--right {
     color: $color-text;
     font-family: $font-subtitle;
-    // font-size: 2.2rem;
+    // font-size: 2.25rem;
     font-size: 1.16vw;
 
     text-justify: inter-word;
@@ -161,9 +161,6 @@
     }
   }
 
-  &__button--like-box {
-
-  }
   &__button--like {
     display: flex;
     align-items: center;
@@ -216,9 +213,6 @@
 
   }
 
-  &__button--share-box {
-
-  }
   &__button--share {
     display: flex;
     align-items: center;
@@ -235,7 +229,6 @@
 
     & svg {
       margin-right: .7rem;
-      // fill: $color-border;
       width: 18px;
       height: auto;
     }
@@ -243,9 +236,6 @@
     &:hover {
       background-color: rgba($color-border, .2);
     }
-  }
-  &__button--bookmark-box {
-
   }
   &__button--bookmark {
     display: flex;
@@ -263,15 +253,13 @@
 
     & svg {
       margin-right: .7rem;
-      // fill: $color-border;
       width: 18px;
       height: auto;
     }
 
     &:hover {
       background-color: rgba($color-border, .2);
-    }
-    
+    } 
   }
 
 
@@ -283,7 +271,6 @@
     border-top: 5px solid $color-text;
     color: $color-text;
     padding-bottom: 1rem;
-    // margin-top: 15rem;
     margin-top: auto;
 
     background:
@@ -298,9 +285,6 @@
     margin-top: 15rem;
   }
 
-  &__footer-title-box {
-
-  }
   &__footer-title {
     font-family: $font-logo;
     font-size: 4rem;
@@ -322,9 +306,7 @@
       margin-right: 10rem;
     }
   }
-  &__footer-content-box2 {
-
-  }
+ 
   &__footer-content {
     font-family: $font-subtitle;
     font-size: 1.5rem;
@@ -336,4 +318,43 @@
     }
   }
 
+}
+
+
+
+// TEXT SWIFT-UP ANIMATION.
+:root {
+  --headingSize: 55px;
+}
+
+
+strong {
+  display: inline-block;
+  overflow: hidden;
+  animation: .3s swift-up ease-in-out forwards;
+}
+
+i {
+  font-style: normal;
+  position: relative;
+  top: var(--headingSize);
+  animation: .5s swift-up ease-in-out forwards;
+}
+
+
+@keyframes swift-up {
+  to {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: auto;
+    margin: 0 10%;
+  }
+
+  :root {
+    --headingSize: 35px;
+  }
 }
